@@ -1,0 +1,331 @@
+fileFormatVersion: 2
+guid: c33e20366d5c2514faf6c045c3a187d8
+timeCreated: 1509207844
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Armature
+    100002: foot_L
+    100004: foot_R
+    100006: hand_L
+    100008: hand_R
+    100010: handle_L
+    100012: handle_R
+    100014: head
+    100016: hip_L
+    100018: hip_R
+    100020: knee_L
+    100022: knee_R
+    100024: lower_arm_L
+    100026: lower_arm_R
+    100028: lower_leg_L
+    100030: lower_leg_R
+    100032: master
+    100034: neck1
+    100036: neck2
+    100038: Plane
+    100040: //RootNode
+    100042: shoulder_L
+    100044: shoulder_R
+    100046: spine1
+    100048: spine2
+    100050: spine3
+    100052: upper_arm_L
+    100054: upper_arm_R
+    100056: upper_leg_L
+    100058: upper_leg_R
+    400000: Armature
+    400002: foot_L
+    400004: foot_R
+    400006: hand_L
+    400008: hand_R
+    400010: handle_L
+    400012: handle_R
+    400014: head
+    400016: hip_L
+    400018: hip_R
+    400020: knee_L
+    400022: knee_R
+    400024: lower_arm_L
+    400026: lower_arm_R
+    400028: lower_leg_L
+    400030: lower_leg_R
+    400032: master
+    400034: neck1
+    400036: neck2
+    400038: Plane
+    400040: //RootNode
+    400042: shoulder_L
+    400044: shoulder_R
+    400046: spine1
+    400048: spine2
+    400050: spine3
+    400052: upper_arm_L
+    400054: upper_arm_R
+    400056: upper_leg_L
+    400058: upper_leg_R
+    4300000: Plane
+    7400000: Default Take
+    7400002: Walk
+    9500000: //RootNode
+    13700000: Plane
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material_006
+    second: {fileID: 2100000, guid: 1e1470a9e7b4f43eca3fb4b8593d9a1e, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/master
+        weight: 1
+      - path: Armature/master/handle_L
+        weight: 1
+      - path: Armature/master/handle_L/foot_L
+        weight: 1
+      - path: Armature/master/handle_R
+        weight: 1
+      - path: Armature/master/handle_R/foot_R
+        weight: 1
+      - path: Armature/master/knee_L
+        weight: 1
+      - path: Armature/master/knee_R
+        weight: 1
+      - path: Armature/master/spine1
+        weight: 1
+      - path: Armature/master/spine1/hip_L
+        weight: 1
+      - path: Armature/master/spine1/hip_L/upper_leg_L
+        weight: 1
+      - path: Armature/master/spine1/hip_L/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Armature/master/spine1/hip_R
+        weight: 1
+      - path: Armature/master/spine1/hip_R/upper_leg_R
+        weight: 1
+      - path: Armature/master/spine1/hip_R/upper_leg_R/lower_leg_R
+        weight: 1
+      - path: Armature/master/spine1/spine2
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/neck2
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/neck2/neck1
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/neck2/neck1/head
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_L
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_L/upper_arm_L/lower_arm_L
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_L/upper_arm_L/lower_arm_L/hand_L
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_R
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_R/upper_arm_R/lower_arm_R
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_R/upper_arm_R/lower_arm_R/hand_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Walk
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/master
+        weight: 1
+      - path: Armature/master/handle_L
+        weight: 1
+      - path: Armature/master/handle_L/foot_L
+        weight: 1
+      - path: Armature/master/handle_R
+        weight: 1
+      - path: Armature/master/handle_R/foot_R
+        weight: 1
+      - path: Armature/master/knee_L
+        weight: 1
+      - path: Armature/master/knee_R
+        weight: 1
+      - path: Armature/master/spine1
+        weight: 1
+      - path: Armature/master/spine1/hip_L
+        weight: 1
+      - path: Armature/master/spine1/hip_L/upper_leg_L
+        weight: 1
+      - path: Armature/master/spine1/hip_L/upper_leg_L/lower_leg_L
+        weight: 1
+      - path: Armature/master/spine1/hip_R
+        weight: 1
+      - path: Armature/master/spine1/hip_R/upper_leg_R
+        weight: 1
+      - path: Armature/master/spine1/hip_R/upper_leg_R/lower_leg_R
+        weight: 1
+      - path: Armature/master/spine1/spine2
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/neck2
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/neck2/neck1
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/neck2/neck1/head
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_L
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_L/upper_arm_L
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_L/upper_arm_L/lower_arm_L
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_L/upper_arm_L/lower_arm_L/hand_L
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_R
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_R/upper_arm_R
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_R/upper_arm_R/lower_arm_R
+        weight: 1
+      - path: Armature/master/spine1/spine2/spine3/shoulder_R/upper_arm_R/lower_arm_R/hand_R
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
