@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
   private bool isThrowing = false;
   private GameObject holdObj;
   private Collider holdableObj;
+
+  public string playerType;
   void Update()
   {
     
@@ -84,6 +86,7 @@ public class Player : MonoBehaviour
         isHold = false;
         isThrowing = true;
         this.Delay(1.0f, setIsThorwing, false);
+        playerType = "";
       }
     }
     if (Input.GetKeyDown(KeyCode.Mouse1)){
@@ -100,6 +103,7 @@ public class Player : MonoBehaviour
         isHold = false;
         isThrowing = true;
         this.Delay(1.0f, setIsThorwing, false);
+        playerType = "";
       }
     }
     if (Input.GetKeyDown(KeyCode.Mouse0) && holdableObj && !isThrowing)
@@ -107,7 +111,7 @@ public class Player : MonoBehaviour
       if (!isHold)
       {
         holdObj = holdableObj.transform.gameObject;
-        Debug.Log(holdableObj.transform);
+        //Debug.Log(holdableObj.transform);
         isHold = true;
         holdableObj.transform.parent = transform;
         holdableObj.attachedRigidbody.useGravity = false;
@@ -117,8 +121,12 @@ public class Player : MonoBehaviour
         holdObj.layer = 9;
         // 型チェックか、CharacterClassを作るか
         holdObj.GetComponent<Sheep>().stop();
+        playerType = holdObj.GetComponent<Sheep>().sheepType;
+        //Debug.Log("hold!");
       }
+
     }
+    //Debug.Log("___" + playerType);
 
    
   //if (Input.GetKeyDown(KeyCode.F))

@@ -8,9 +8,12 @@ public class Sheep : MonoBehaviour
   private float timeToChangeDirection = 5.0f;
   private float resetTime;
   private Vector3 direction;
-  private float speed = 1.5f;
+  private float defSpeed = 1.5f;
+  private float speed;
   public string sheepType = "";
   private string oldType = "";
+
+  // Color Settings
   private Color normal = new Color(236 / 255F, 236 / 255F, 236 / 255F, 1F);
   private Color blue = new Color(30 / 255F, 103 / 255F, 244 / 255F, 1F);
   private Color red = new Color(249 / 255F, 18 / 255F, 109 / 255F, 1F);
@@ -28,6 +31,9 @@ public class Sheep : MonoBehaviour
 
   private Material[] mats;
 
+  private GameObject Player;
+  private Player playerScript;
+
   public void Awake()
   {
     colorDic.Add("normal", normal);
@@ -38,6 +44,9 @@ public class Sheep : MonoBehaviour
   }
   public void Start()
   {
+    Player = GameObject.Find("Player");
+    Debug.Log(Player);
+    playerScript = Player.GetComponent<Player>();
     ChangeDirection();
     rb = GetComponent<Rigidbody>();
     
@@ -66,6 +75,8 @@ public class Sheep : MonoBehaviour
       setSheepType("normal");
     }
 
+    //setSheepType("blue");
+
   }
   // Update is called once per frame
   public void Update()
@@ -83,9 +94,19 @@ public class Sheep : MonoBehaviour
       {
         ChangeDirection();
       }
+
+      speed = defSpeed;
+      if (sheepType == playerScript.playerType){
+        float distance = Vector3.Distance(Player.transform.position, transform.position);
+        if(distance < 7){
+          speed = 7 / distance * defSpeed;
+        }
+        direction = Player.transform.position - transform.position;
+      }
       //Debug.Log(transform.forward);
       //rb.velocity = transform.forward * 2;
       //Debug.Log(direction);
+
       transform.position = (transform.position + transform.forward * Time.deltaTime * speed);
       transform.forward = Vector3.Slerp(transform.forward, direction, Time.deltaTime);
     }
@@ -161,5 +182,11 @@ public class Sheep : MonoBehaviour
   public void play()
   {
     isStop = false;
+  }
+  public void OnCollisionEnter(Collision other){
+    if(sheepType == "normal"){
+      if(other.gameObject.GetComponent<Sheep>() != null)
+        sheepType = other.gameObject.GetComponent<Sheep>().sheepType;
+    }
   }
 }
