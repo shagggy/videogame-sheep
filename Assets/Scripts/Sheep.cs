@@ -23,8 +23,11 @@ public class Sheep : MonoBehaviour
   private bool isStop = false;
   public bool isDestroyable = false;
 
-  private Color alpha = new Color(0, 0, 0, 0.05f);
+  private Color alpha = new Color(0, 0, 0, 0.02f);
   private bool isLeaving = false;
+
+  private Material[] mats;
+
   public void Awake()
   {
     colorDic.Add("normal", normal);
@@ -39,7 +42,7 @@ public class Sheep : MonoBehaviour
     rb = GetComponent<Rigidbody>();
     
     rd = transform.Find("Plane").gameObject.GetComponent<Renderer>();
-
+    mats = rd.materials;
     int i = Random.Range(0, 5);
     if (i == 0)
     {
@@ -89,9 +92,15 @@ public class Sheep : MonoBehaviour
     oldType = sheepType;
 
     if(isLeaving){
-      
       if (rd.material.color.a >= 0)
-        rd.material.color -= alpha;
+      {
+        mats[0].color -= alpha;
+        mats[1].color -= alpha;
+        rd.materials = mats;
+      }
+      else if(rd.material.color.a < 0){
+        Destroy(gameObject);
+      }
       transform.localScale += new Vector3(0.1f, 0.1f, 0.1f);
     }
   }
@@ -139,7 +148,7 @@ public class Sheep : MonoBehaviour
     rb.velocity = Vector3.zero;
     rb.isKinematic = false;
     rb.useGravity = false;
-    rb.AddForce(new Vector3(0, 4, 0), ForceMode.VelocityChange);
+    rb.AddForce(new Vector3(0, 2, 0), ForceMode.VelocityChange);
     isLeaving = true;
     AddScore(1);
   }
